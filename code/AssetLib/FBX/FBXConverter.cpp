@@ -1660,6 +1660,8 @@ unsigned int FBXConverter::ConvertMaterial(const Material &material, const MeshG
         name = name.substr(10);
     }
 
+    name = name + std::to_string(materials.size());
+
     // set material name if not empty - this could happen
     // and there should be no key for it in this case.
     if (name.length()) {
